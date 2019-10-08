@@ -1,0 +1,15 @@
+<h3>Save an user</h3>
+
+<div style="display: flex; flex-direction: column;">
+    <label for="">Name:
+        <input class="form-control" type="text" placeholder="Name" [(ngModel)]="request.name">
+    </label>
+    <label for="">Mail:
+        <input class="form-control" type="email" placeholder="Mail" [(ngModel)]="request.mail">
+    </label>
+    <label for="">Role:
+        <input class="form-control" type="text" placeholder="Role" [(ngModel)]="request.role">
+    </label>
+    <button (click)="save()" type="button" class="btn btn-primary">Save</button>
+</div>
+<hr>

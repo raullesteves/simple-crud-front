@@ -1,0 +1,20 @@
+<div>
+    <div>
+        <table style="margin-top: 3rem">
+            <tr>
+                <th>Name</th>
+                <th>Mail</th>
+                <th>Role</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+            <tr *ngFor="let user of users" style="border-bottom: 1px solid black;" class="form-group">
+                <td style="text-align: center;"><input class="form-control" type="text" [(ngModel)]="user.name"></td>
+                <td style="text-align: center;"><input class="form-control" type="text" [(ngModel)]="user.mail"></td>
+                <td style="text-align: center;"><input class="form-control" type="text" [(ngModel)]="user.role"></td>
+                <td style="text-align: center;"><button (click)="delete(user._id)" class="btn btn-danger">Delete</button></td>
+                <td style="text-align: center;"><button (click)="update(user)" class="btn btn-warning">Update</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
