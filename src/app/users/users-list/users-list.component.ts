@@ -25,7 +25,7 @@ export class UsersListComponent implements OnInit {
     delete body._id;
     delete body.__v;
     this.usersApiService.updateUser(_id, body).subscribe(res => {
-      alert('Success :)');
+      alert('Updated! :)');
     })
   };
 
@@ -33,8 +33,7 @@ export class UsersListComponent implements OnInit {
     this.usersApiService.deleteUser(id).subscribe(res => {
       const index = this.users.findIndex(elem => elem._id == id);
       if (index > -1) this.users.splice(index, 1);
-      console.log(1111, res)
-      console.log(this.users);
+      alert('Deleted! :)')
     })
   };
 }
